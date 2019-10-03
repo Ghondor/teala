@@ -21,6 +21,9 @@ ActiveAdmin.register Food do
     f.inputs "Item in Food Menu" do
       f.input :title
       f.input :description, as: :quill_editor
+      f.input :category
+      f.input :price
+      f.input :image_path
     end
 
     f.actions
