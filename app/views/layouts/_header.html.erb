@@ -1,0 +1,32 @@
+<header role="banner">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+<!--      <a class="navbar-brand" href="/foods">Gourmet</a>-->
+      <%= link_to "Gourmet", root_path, class: "navbar-brand", method: "get" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+          <li class="nav-item ">
+            <%= link_to "Home", root_path, class: "nav-link active", method: "get" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Menu", foods_path, class: "nav-link", method: "get" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Service", service_path, class: "nav-link", method: "get" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "About", about_path, class: "nav-link", method: "get" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Contact", contact_path, class: "nav-link", method: "get" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- END header -->

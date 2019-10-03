@@ -1,0 +1,28 @@
+<div class="slider-wrap">
+  <div class="slider-item" style="background-image: url(<%= asset_path @item.image_path %>); background-size: cover;">
+
+    <div class="container">
+      <div class="row slider-text align-items-center justify-content-center">
+        <div class="col-md-8 text-center col-sm-12 ">
+          <h1 data-aos="fade-up"><%= @item.title %></h1>
+          <h3 data-aos="fade-up" style="color: #fff;"><%= Category.find(@item.category_id).name %></h3>
+          <p class="mb-5" data-aos="fade-up" data-aos-delay="100"><%= @item.created_at.strftime("%d-%m-%Y") %></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- END slider -->
+</div>
+
+
+<section class="section bg-light pt-0 bottom-slant-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2><%= @item.title %></h2>
+        <%= @item.description.html_safe %>
+      </div>
+    </div>
+  </div>
+</section>
