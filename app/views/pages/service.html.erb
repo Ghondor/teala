@@ -1,5 +1,5 @@
 <div class="slider-wrap">
-  <div class="slider-item" style="background-image: url(<%= asset_path 'hero_1.jpg' %>);">
+  <div class="slider-item" style="background-image: url(<%= asset_path 'lidye-1Shk_PkNkNw-unsplash-Copy.jpg' %>);">
 
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
@@ -49,6 +49,33 @@
         <h3 class="mb-2 text-primary">Drinks &amp; Beverages</h3>
         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container-fluid mb-5">
+    <div class="row" data-aos="fade">
+      <div class="col-md-12 text-center heading-wrap">
+        <h2>Special Events</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row no-gutters">
+      <% @events.each do |event| %>
+        <div class="col-md-12">
+          <div class="sched d-block d-lg-flex">
+            <div class="bg-image order-2" style="background-image: url(<%= asset_path event.image_path %>);" data-aos="fade"></div>
+            <div class="text order-1">
+              <h3><%= event.title %></h3>
+              <p><%= event.date_event.strftime("%d/%m/%Y") %> - <%= event.time_event.to_s(:time) %></p>
+              <p><%= link_to "Read More", event_path(event), class: "btn btn-primary btn-sm", method: "get" %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <p><br><%= link_to "See all events", events_path, class: "btn btn-primary btn-sm", method: "get" %></p>
     </div>
   </div>
 </section>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:create]
   resources :foods, only: [:index, :show]
+  resources :events, only: [:show, :index]
 
   root 'pages#home'
 end

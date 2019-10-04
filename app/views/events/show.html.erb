@@ -1,0 +1,26 @@
+<div class="slider-wrap">
+  <div class="slider-item" style="background-image: url(<%= asset_path @event.image_path %>);">
+
+    <div class="container">
+      <div class="row slider-text align-items-center justify-content-center">
+        <div class="col-md-8 text-center col-sm-12 ">
+          <h1 data-aos="fade-up"><%= @event.title %></h1>
+          <p class="mb-5" data-aos="fade-up" data-aos-delay="100"><%= @event.date_event.strftime("%d/%m/%Y") %> - <%= @event.time_event.to_s(:time) %></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- END slider -->
+</div>
+
+<section class="section bg-light pt-0 bottom-slant-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2><%= @event.title %></h2>
+        <%= sanitize @event.description %>
+      </div>
+    </div>
+  </div>
+</section>

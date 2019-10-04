@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def service
+    @events = Event.last(2)
   end
 
   def contact

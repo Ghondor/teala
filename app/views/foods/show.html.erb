@@ -19,9 +19,9 @@
 <section class="section bg-light pt-0 bottom-slant-gray">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 text-center">
-        <h2><%= @item.title %></h2>
-        <%= @item.description.html_safe %>
+      <div class="col-sm-12">
+        <h2 class="text-center"><%= @item.title %></h2>
+        <%= sanitize @item.description %>
       </div>
     </div>
   </div>
