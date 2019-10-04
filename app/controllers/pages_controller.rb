@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @menu = Food.last(2)
+    @menu = Food.last(5)
   end
 
   def service

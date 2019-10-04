@@ -4,7 +4,7 @@
     <div class="row mb-5">
       <div class="col-md-4 mb-5">
         <h3>About Us</h3>
-        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus et dolor blanditiis consequuntur ex voluptates perspiciatis omnis unde minima expedita.</p>
+        <p class="mb-5">The official home of all things Tasty, the world's largest food network. Search, watch, and cook every single Tasty recipe and video ever - all in one place!</p>
         <ul class="list-unstyled footer-link d-flex footer-social">
           <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
           <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
@@ -16,7 +16,7 @@
       <div class="col-md-5 mb-5">
         <div class="mb-5">
           <h3>Opening Hours</h3>
-          <p><strong class="d-block font-weight-normal text-black">Sunday-Thursday</strong> 5AM - 10PM</p>
+          <p><strong class="d-block font-weight-normal text-black">Monday-Sunday</strong> 8AM - 11PM</p>
         </div>
         <div>
           <h3>Contact Info</h3>
@@ -32,10 +32,9 @@
       <div class="col-md-3 mb-5">
         <h3>Quick Links</h3>
         <ul class="list-unstyled footer-link">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Disclaimers</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><%= link_to "About", about_path, method: "get" %></li>
+          <li><%= link_to "Menu", foods_path, method: "get" %></li>
+          <li><%= link_to "Contact", contact_path, method: "get" %></li>
         </ul>
       </div>
       <div class="col-md-3">
@@ -45,10 +44,7 @@
     <div class="row">
       <div class="col-12 text-md-center text-left">
         <p>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
+          Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Teala
         </p>
       </div>
     </div>
