@@ -39,9 +39,9 @@
           <h2 data-aos="fade-up">The Restaurant</h2>
         </div>
         <!-- <h3 class="mb-4">Welcome To Our Restaurant</h3> -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ut enim quam laboriosam illum amet.</p>
-        <p>Obcaecati nisi ipsum possimus necessitatibus tempore, illo id facere magni quisquam quam quaerat accusamus
-          dolores?</p>
+        <p>This peaceful place has the most delicious food The Olive Garden is the most exquisite place to eat and is
+          truly the finest restaurant in town.The uniquely textured walls produce a smooth yet flowing look. It is
+          almost as if you are in a famous building in Italy.</p>
         <p><%= image_tag("signature.png", class: "img-fluid w-25") %></p>
       </div>
 
@@ -86,13 +86,13 @@
     </div>
     <div class="owl-carousel centernonloop">
       <% @menu.each do |item| %>
-          <%= link_to(food_path(item), html_options = { class: "item-dishes", "data-aos": "fade-right", "data-aos-delay": "100", method: "get" }) do %>
-            <div class="text">
-              <p class="dishes-price">$<%= item.price %></p>
-              <h2 class="dishes-heading"><%= item.title %></h2>
-            </div>
-            <%= image_tag(item.image_path, class: "img-fluid") %>
-          <% end %>
+        <%= link_to(food_path(item), html_options = {class: "item-dishes", "data-aos": "fade-right", "data-aos-delay": "100", method: "get"}) do %>
+          <div class="text">
+            <p class="dishes-price">$<%= item.price %></p>
+            <h2 class="dishes-heading"><%= item.title %></h2>
+          </div>
+          <%= image_tag(item.image_path, class: "img-fluid") %>
+        <% end %>
       <% end %>
     </div>
   </div>
@@ -121,42 +121,38 @@
         <div class="owl-carousel centernonloop2">
           <div class="slide" data-aos="fade-left" data-aos-delay="100">
             <blockquote class="testimonial">
-              <p>&ldquo; Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-                language ocean. &rdquo;</p>
+              <p>&ldquo; Had dinner with girl friends. Menu is perfect, something for everyone. Service was awesome and
+                Jason was very accommodating. Will be back definitely! &rdquo;</p>
               <div class="d-flex author">
                 <%= image_tag("person_1.jpg", class: "mr-4") %>
                 <div class="author-info">
                   <h4>Mellisa Howard</h4>
-                  <p>CEO, XYZ Company</p>
                 </div>
               </div>
             </blockquote>
           </div>
           <div class="slide" data-aos="fade-left" data-aos-delay="200">
             <blockquote class="testimonial">
-              <p>&ldquo; Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-                language ocean. &rdquo;</p>
+              <p>&ldquo; The food was absolutely wonderful, from preparation to presentation, very pleasing. We
+                especially enjoyed the special bar drinks, the cucumber/cilantro infused vodka martini and the K&P
+                Aquarium was great (even took photos so we could try to replicate at home). &rdquo;</p>
               <div class="d-flex author">
                 <%= image_tag("person_2.jpg", class: "mr-4") %>
                 <div class="author-info">
                   <h4>Mike Richardson</h4>
-                  <p>CEO, XYZ Company</p>
                 </div>
               </div>
             </blockquote>
           </div>
           <div class="slide" data-aos="fade-left" data-aos-delay="300">
             <blockquote class="testimonial">
-              <p>&ldquo; Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-                language ocean. &rdquo;</p>
+              <p>&ldquo; Although we didn't go into the onsite restaurant, we ordered some food at the bar a few times
+                and it was delicious. The bar area and lobby were nice and open, good place to relax and meet
+                friends. &rdquo;</p>
               <div class="d-flex author">
                 <%= image_tag("person_3.jpg", class: "mr-4") %>
                 <div class="author-info">
                   <h4>Charles White</h4>
-                  <p>CEO, XYZ Company</p>
                 </div>
               </div>
             </blockquote>
